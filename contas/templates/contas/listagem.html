@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+	<!-- <link rel="stylesheet" href="main.css"/> -->
+	<!-- <script src="main.js"></script> -->
+
+</head>
+<body>
+    
+	
+    <h1>Listagem</h1>
+	<ul>
+	{% for transacao in transacoes%}
+	
+		<li><a href="{% url 'update_url' transacao.id%}">
+		{{transacao.descricao}} - {{transacao.data}} - {{transacao.valor}}
+		 - {{transacao.categoria}}</li></a>
+		
+	{% endfor %}
+	</ul>
+	
+	<!--chama a url novo_url em urls.py-->
+	<a href="{%url 'novo_url'%}">Novo</a><br/>
+	
+	{% load static %}
+	<img src="{% static "imgN.png" %}" alt="My image">
+	
+</body> 
+</html> 
