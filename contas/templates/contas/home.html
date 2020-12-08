@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+	<!-- <link rel="stylesheet" href="main.css"/> -->
+	<!-- <script src="main.js"></script> -->
+	
+</head>
+<body>
+    <h1>Primeira Pagina</h1>
+	
+	<p>Agora são: {{now}}</p>
+	
+	<ul>
+	{% for transacao in transacoes%}
+	
+		{% if transacao == "t1" %}
+			<li><strong>{{transacao}}</strong></li>
+		{% else %}
+			<li>{{transacao}}</li>
+		{% endif %}
+		<li>{{transacao}}</li>
+		
+	{% endfor %}
+	</ul>
+</body> 
+</html> 
